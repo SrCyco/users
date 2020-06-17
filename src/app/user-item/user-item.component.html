@@ -1,1 +1,4 @@
-<p>user-item works!</p>
+<article class="user" *ngIf="user">
+    <p class="user__name">{{user.UserName}}</p>
+    <button class="user__add">View user</button>
+</article>

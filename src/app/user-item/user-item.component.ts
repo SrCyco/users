@@ -8,7 +8,7 @@ import { User } from '../interfaces/user';
 })
 export class UserItemComponent implements OnInit {
 
-  @Input() public userInfo: User;
+  @Input() public user: User;
 
   constructor() { }
 

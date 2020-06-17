@@ -1,4 +1,5 @@
 <button class="button--add">+ Add user</button>
 <article class="users-list">
-    <app-user-item></app-user-item>
+    <app-user-item *ngFor="let user of usersList"
+                    [user]="user"></app-user-item>
 </article>
