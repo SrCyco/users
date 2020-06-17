@@ -1,4 +1,4 @@
 <article class="user" *ngIf="user">
     <p class="user__name">{{user.UserName}}</p>
-    <button class="user__add">View user</button>
+    <button class="user__add" (click)="onViewUser(user.ID)">View user</button>
 </article>
