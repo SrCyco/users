@@ -1,1 +1,8 @@
-<p>view-user works!</p>
+<article class="user-info" *ngIf="user">
+    <section class="user-info__header">
+        <h2 class="user-info__title">View of user number {{user.ID}}</h2>
+        <button (click)="onDeleteUser(user.ID)">- Delete user</button>
+    </section>
+    <p class="user-info__name">Name: {{user.UserName}}</p>
+</article>
+
