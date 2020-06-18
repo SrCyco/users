@@ -1,6 +1,7 @@
-<article class="alert" *ngIf="deleted || created">
+<article class="alert" *ngIf="state && (deleted || created)">
     <p>User has been {{state}}</p>
-    <button class="button button--delete">X</button>
+    <button class="button button--delete"
+            (click)="state=null">X</button>
 </article>
 
 <button class="button button--add" (click)="onCreateUser()">+ Add user</button>
