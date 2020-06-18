@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body, button, input {
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+    border: 0;
+    border-radius: 15px;
+    padding: 8px 15px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    &--add {
+        background-color: rgb(75, 199, 75);
+        color: #ffffff;
+    }
+    &--view {
+        background-color: rgb(144, 144, 240);
+    }
+    &--delete {
+        background-color: rgb(199, 70, 70);
+        color: #ffffff;
+    }
+}

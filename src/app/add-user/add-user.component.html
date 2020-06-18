@@ -1,17 +1,17 @@
 <h2>Create new User</h2>
 
-<form [formGroup]="createUserForm">
-    <div>
+<form [formGroup]="createUserForm" >
+    <div class="form-item">
         <label for="username">Username: </label>
         <input type="text" formControlName="UserName" name='username' id="username">
         <p class="error" *ngIf="validationError('UserName', 'required')">This field is required</p>
     </div>
-    <div>
+    <div class="form-item">
         <label for="password">Password: </label>
         <input type="Password" formControlName="Password" name="password" id="password">
         <p class="error" 
             *ngIf="validationError('Password', 'required')">This field is required</p>
         <p class="error" *ngIf="validationError('Password', 'minlength')">Must be at least 8 characters</p>
     </div>
-    <button (click)="onCreateUser()">Create user</button>
+    <button (click)="onCreateUser()" class="button button--add">Create user</button>
 </form>
