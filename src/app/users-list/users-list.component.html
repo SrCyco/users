@@ -1,0 +1,11 @@
+<article class="alert" *ngIf="state && (deleted || created)">
+    <p>User has been {{state}}</p>
+    <button class="button button--delete"
+            (click)="state=null">X</button>
+</article>
+
+<button class="button button--add" (click)="onCreateUser()">+ Add user</button>
+<article class="users-list">
+    <app-user-item *ngFor="let user of usersList"
+                    [user]="user"></app-user-item>
+</article>
