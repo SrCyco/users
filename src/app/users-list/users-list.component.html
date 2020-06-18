@@ -1,4 +1,4 @@
-<article class="alert" *ngIf="deleted">User has been {{state}}</article>
+<article class="alert" *ngIf="deleted || created">User has been {{state}}</article>
 
 <button class="button--add" (click)="onCreateUser()">+ Add user</button>
 <article class="users-list">

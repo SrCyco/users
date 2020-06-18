@@ -28,4 +28,8 @@ export class UserService {
    public deleteUser(userId: number) {
     return this.http.delete(`${this.API}/${userId}`);
    }
+
+   public addUser(body) {
+     return this.http.post(this.API, body);
+   }
 }

@@ -1,1 +1,11 @@
-<p>add-user works!</p>
+<h2>Create new User</h2>
+
+<form [formGroup]="createUserForm">
+    <div>
+        <input type="text" formControlName="UserName">
+    </div>
+    <div>
+        <input type="Password" formControlName="Password">
+    </div>
+    <button (click)="onCreateUser()">Create user</button>
+</form>

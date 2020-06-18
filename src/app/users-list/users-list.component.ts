@@ -13,6 +13,7 @@ export class UsersListComponent implements OnInit {
   public usersList: User[];
   public state: string;
   public deleted: boolean;
+  public created: boolean;
 
   constructor(
     private usersService : UserService,
@@ -37,8 +38,12 @@ export class UsersListComponent implements OnInit {
       case 'deleted':
         this.deleted = true;
         break;
+      case 'created':
+        this.created = true;
+        break;
       default:
         this.deleted = false;
+        this.created = false;
         break;
     }
   }
