@@ -30,16 +30,26 @@ export class AddUserComponent implements OnInit {
   }
 
   public onCreateUser(): void {
-    if (this.createUserForm.status === 'INVALID') {
-      return; 
+    if (this.createUserForm.invalid) {
+      return Object.values(this.createUserForm.controls).forEach( control => {
+        control.markAsTouched();
+      }); 
     }
     
     const body = this.createUserForm.value;
     this.userService.addUser(body)
       .subscribe(response => {
-        console.log(response);
         this.router.navigate(['list'], {queryParams: {state: 'created'}});
       });
+  }
+
+  public get fc() {
+    return this.createUserForm.controls;
+  }
+
+  public validationError(controlName, error): boolean {
+    const control = this.fc[controlName];
+    return control.errors && control.errors[error] && control.touched;
   }
 
 }
